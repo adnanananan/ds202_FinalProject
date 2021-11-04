@@ -1,0 +1,42 @@
+---
+title: "Project Proposal"
+author: "Adnan Salihovic"
+date: "11/3/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(scales)
+library(tidyverse)
+library(dplyr)
+
+gradrates <- readxl::read_xls('Downloads/graduationrates.xls')
+medianincome <- readxl::read_xls('Downloads/medianincome.xls')
+poverty <- readxl::read_xls('Downloads/povertyinfo.xls')
+
+"Links to the data sets:
+Iowa Graduation Rates data set: https://data.iowa.gov/Primary-Secondary-Ed/4-Year-Graduation-Rates-in-Iowa-by-Cohort-and-Publ/tqti-3w6t
+
+Iowa Poverty Estimates data set: https://www.iowadatacenter.org/data/saipe/saipe-poverty
+
+Iowa Median Household Income data set: https://www.iowadatacenter.org/data/saipe/saipe-income"
+
+str(gradrates)
+str(medianincome)
+str(poverty)
+
+head(gradrates)
+head(medianincome)
+head(poverty)
+
+"I would like to use the 3 datasets to answer questions on how an areas poverty rating and median income affected graduation rates at different areas in IOWA. I would also like to look into potentially figuring out if it would be possible to use the accumulated years data to try and predict possible trends in future years if the data will allow me to do so. If this is not enough information I can also attempt to add more datasets pertaining to IOWA to answer how graduation rates might have been affected as well as potentially answer different questions along the way as well. "
+
+"Questions that will be answered are: Which area had the most consistent rates of graduation? How does poverty affect graduation rates? How did the median income of an area affect graduation rate? Which year had the highest graduation rates across all areas of Iowa with respect to the amount of graduates? How did poverty change over the years (Would I also be able to find information as to reasons it changed?)?"
+
+```
+
